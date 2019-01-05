@@ -1,7 +1,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 <meta charset="utf-8">
 
@@ -35,22 +35,21 @@
 <link href="/theme/css/readmore.css" rel="stylesheet">
 
 
-
 <style>
-.btn:focus, .btn:active, button:focus, button:active {
-	outline: none !important;
-	box-shadow: none !important;
-}
+        .btn:focus, .btn:active, button:focus, button:active {
+            outline: none !important;
+            box-shadow: none !important;
+        }
 
-#image-gallery .modal-footer {
-	display: block;
-}
+        #image-gallery .modal-footer {
+            display: block;
+        }
 
-.thumb {
-	margin-top: 15px;
-	margin-bottom: 15px;
-}
-</style>
+        .thumb {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+    </style>
 
 </head>
 <body>
@@ -159,7 +158,7 @@
 		<p class="text-center">
 			<a class="thumbnail col-12" href="#" data-image-id=""
 				data-toggle="modal" data-title=""
-				data-image="/theme/img/large3.jpg" data-target="#image-gallery">
+				data-image="/img/large3.jpg" data-target="#image-gallery">
 				
 				<img class="img-thumbnail"
 				src="/theme/img/mini.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
@@ -201,5 +200,99 @@
 	<script src="/theme/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 	<script src="/theme/js/anchor.js"></script>
 	<!-- FIN Librerias js -->
+	<script>
+    let modalId = $('#image-gallery');
+
+    $(document)
+        .ready(function () {
+
+            loadGallery(true, 'a.thumbnail');
+
+            //This function disables buttons when needed
+            function disableButtons(counter_max, counter_current) {
+                $('#show-previous-image, #show-next-image')
+                    .show();
+                if (counter_max === counter_current) {
+                    $('#show-next-image')
+                        .hide();
+                } else if (counter_current === 1) {
+                    $('#show-previous-image')
+                        .hide();
+                }
+            }
+
+            /**
+             *
+             * @param setIDs        Sets IDs when DOM is loaded. If using a PHP counter, set to false.
+             * @param setClickAttr  Sets the attribute for the click handler.
+             */
+
+            function loadGallery(setIDs, setClickAttr) {
+                let current_image,
+                    selector,
+                    counter = 0;
+
+                $('#show-next-image, #show-previous-image')
+                    .click(function () {
+                        if ($(this)
+                                .attr('id') === 'show-previous-image') {
+                            current_image--;
+                        } else {
+                            current_image++;
+                        }
+
+                        selector = $('[data-image-id="' + current_image + '"]');
+                        updateGallery(selector);
+                    });
+
+                function updateGallery(selector) {
+                    let $sel = selector;
+                    current_image = $sel.data('image-id');
+                    $('#image-gallery-title')
+                        .text($sel.data('title'));
+                    $('#image-gallery-image')
+                        .attr('src', $sel.data('image'));
+                    disableButtons(counter, $sel.data('image-id'));
+                }
+
+                if (setIDs == true) {
+                    $('[data-image-id]')
+                        .each(function () {
+                            counter++;
+                            $(this)
+                                .attr('data-image-id', counter);
+                        });
+                }
+                $(setClickAttr)
+                    .on('click', function () {
+                        updateGallery($(this));
+                    });
+            }
+        });
+
+    // build key actions
+    $(document)
+        .keydown(function (e) {
+            switch (e.which) {
+                case 37: // left
+                    if ((modalId.data('bs.modal') || {})._isShown && $('#show-previous-image').is(":visible")) {
+                        $('#show-previous-image')
+                            .click();
+                    }
+                    break;
+
+                case 39: // right
+                    if ((modalId.data('bs.modal') || {})._isShown && $('#show-next-image').is(":visible")) {
+                        $('#show-next-image')
+                            .click();
+                    }
+                    break;
+
+                default:
+                    return; // exit this handler for other keys
+            }
+            e.preventDefault(); // prevent the default action (scroll / move caret)
+        });
+</script>
 </body>
 </html>
