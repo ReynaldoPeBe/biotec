@@ -33,24 +33,7 @@
 <link href="/theme/css/precios.css" rel="stylesheet">
 <link href="/theme/css/list.css" rel="stylesheet">
 <link href="/theme/css/readmore.css" rel="stylesheet">
-
-
-<style>
-        .btn:focus, .btn:active, button:focus, button:active {
-            outline: none !important;
-            box-shadow: none !important;
-        }
-
-        #image-gallery .modal-footer {
-            display: block;
-        }
-
-        .thumb {
-            margin-top: 15px;
-            margin-bottom: 15px;
-        }
-    </style>
-
+<link href="/theme/css/thumb.css" rel="stylesheet">
 </head>
 <body>
 
@@ -157,10 +140,8 @@
 	<div class="row justify-content-center">
 		<p class="text-center">
 			<a class="thumbnail col-12" href="#" data-image-id=""
-				data-toggle="modal" data-title=""
-				data-image="/img/large3.jpg" data-target="#image-gallery">
-				
-				<img class="img-thumbnail"
+				data-toggle="modal" data-title="" data-image="/img/large3.jpg"
+				data-target="#image-gallery"> <img class="img-thumbnail"
 				src="/theme/img/mini.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
 				alt="Another alt text">
 			</a>
@@ -185,6 +166,103 @@
 		</div>
 	</div>
 	<!--FIN  AFICHE -->
+	<div id="congreso">
+		<section class="page-section clearfix">
+			<div class="container">
+				<div class="intro">
+					<img class="intro-img img-fluid mb-3 mb-lg-0 rounded"
+						src="./theme/img/intro2Jpg.jpg" alt="">
+					<div class="intro-text left-0 text-center bg-faded p-5 rounded">
+						<h2 class="section-heading mb-4">
+							<span class="section-heading-lower"><b>C<span
+									style="color: #339999;">O</span>NGR<span
+									style="color: #ffcc33;">E</span>S<span style="color: #fe0000">O</span></b></span>
+						</h2>
+						<p class="mb-3">El principal objetivo del congreso es promover
+							la difusi&oacute;n y el intercambio cient&iacute;fico en el
+							&aacute;rea de la biotecnolog&iacute;a con el prop&oacute;sito de
+							establecer puentes de colaboraci&oacute;n entre instituciones
+							nacionales e internacionales. De esta manera, se busca potenciar
+							el avance y la implementaci&oacute;n de nuevas tecnolog&iacute;as
+							que lleven a generar un desarrollo econ&oacute;mico y social
+							tangible en el pa&iacute;s.</p>
+						<div class="intro-button mx-auto">
+							<a class="btn btn-primary btn-xl"
+								href="javascript:anchorfcpn('inscripcion')">Inscribete al
+								evento</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<section class="contenidopr page-section">
+    <div class="container">
+        <div class="product-item">
+            <div class="product-item-title d-flex">
+                <div class="bg-faded p-5 d-flex ml-auto rounded">
+                    <h2 class="section-heading mb-0">
+                        <span class="section-heading-upper">Especif&iacute;cos</span>
+                        <span class="section-heading-lower">Objetivos</span>
+                    </h2>
+                </div>
+            </div>
+            <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="./theme/img/f2bioJpg.jpg" alt="">
+            <div class="product-item-description d-flex mr-auto">
+                <div class="bg-faded p-5 rounded">
+                    <p class="mb-0">
+                    <div class="container">
+                        <div class="notice notice-list1">
+                            Exponer los trabajos generados por los distintos representantes cient&iacute;ficos a manera
+                            de
+                            difundir la nuevas tendencias y tecnolog&iacute;as entre estudiantes, investigadores,
+                            representantes de instituciones gubernamentales y privadas.
+                        </div>
+                        <div class="notice notice-list2">
+                            Compartir las actividades y proyectos cient&iacute;ficos de los expositores nacionales e
+                            internacionales con el objetivo de determinar las &aacute;reas clave al que deberemos
+                            enfocarnos
+                            para generar un mayor impacto a nivel cient&iacute;fico nacional y mundial.
+                            <!--<strong>FCPN</strong>-->
+                        </div>
+                        <div class="notice notice-list1">
+                            Desarrollar talleres en el &aacute;rea de la biotecnolog&iacute;a a fin de mejorar las
+                            capacidades y
+                            entregar nuevas herramientas de investigaci&oacute;n que permitan ayudar a los
+                            investigadores
+                            nacionales a lograr un mejor nivel cient&iacute;fico.
+                        </div>
+                        <div class="notice notice-list2">
+                            Entregar espacios de reflexi&oacute;n que permitan una discusi&oacute;n constructiva para
+                            definir los
+                            pasos y tareas que tengan por objetivo la creaci&oacute;n de una futura comisi&oacute;n
+                            nacional de
+                            investigaci&oacute;n.
+                        </div>
+                        <div class="notice notice-list1">
+                            Establecer las bases para la construcci&oacute;n de un proyecto de formaci&oacute;n concreta
+                            (master; doctorado) en el &aacute;rea de las nuevas metodolog&iacute;as en biotecnolog&iacute;a,
+                            a trav&eacute;s de la colaboraci&oacute;n entre los centros de investigaci&oacute;n
+                            localizados dentro y fuera del pa&iacute;s.
+                        </div>
+                        <div class="notice notice-list2">
+                            Incentivar a los estudiantes bolivianos a interesarse y capacitarse en el &aacute;rea de la
+                            biotecnolog&iacute;a pensando en la formaci&oacute;n de los futuros investigadores
+                            bolivianos.
+                        </div>
+                        <div class="notice notice-list1">
+                            Identificar los estudiantes m&aacute;s motivados y brillantes para poder apoyarlos con
+                            pasant&iacute;as
+                            y becas para el exterior.
+                        </div>
+                    </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+	
 
 
 	<!-- Librerias js -->
@@ -199,100 +277,7 @@
 	<!-- The theme -->
 	<script src="/theme/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 	<script src="/theme/js/anchor.js"></script>
+	<script src="/theme/js/thumb.js"></script>
 	<!-- FIN Librerias js -->
-	<script>
-    let modalId = $('#image-gallery');
-
-    $(document)
-        .ready(function () {
-
-            loadGallery(true, 'a.thumbnail');
-
-            //This function disables buttons when needed
-            function disableButtons(counter_max, counter_current) {
-                $('#show-previous-image, #show-next-image')
-                    .show();
-                if (counter_max === counter_current) {
-                    $('#show-next-image')
-                        .hide();
-                } else if (counter_current === 1) {
-                    $('#show-previous-image')
-                        .hide();
-                }
-            }
-
-            /**
-             *
-             * @param setIDs        Sets IDs when DOM is loaded. If using a PHP counter, set to false.
-             * @param setClickAttr  Sets the attribute for the click handler.
-             */
-
-            function loadGallery(setIDs, setClickAttr) {
-                let current_image,
-                    selector,
-                    counter = 0;
-
-                $('#show-next-image, #show-previous-image')
-                    .click(function () {
-                        if ($(this)
-                                .attr('id') === 'show-previous-image') {
-                            current_image--;
-                        } else {
-                            current_image++;
-                        }
-
-                        selector = $('[data-image-id="' + current_image + '"]');
-                        updateGallery(selector);
-                    });
-
-                function updateGallery(selector) {
-                    let $sel = selector;
-                    current_image = $sel.data('image-id');
-                    $('#image-gallery-title')
-                        .text($sel.data('title'));
-                    $('#image-gallery-image')
-                        .attr('src', $sel.data('image'));
-                    disableButtons(counter, $sel.data('image-id'));
-                }
-
-                if (setIDs == true) {
-                    $('[data-image-id]')
-                        .each(function () {
-                            counter++;
-                            $(this)
-                                .attr('data-image-id', counter);
-                        });
-                }
-                $(setClickAttr)
-                    .on('click', function () {
-                        updateGallery($(this));
-                    });
-            }
-        });
-
-    // build key actions
-    $(document)
-        .keydown(function (e) {
-            switch (e.which) {
-                case 37: // left
-                    if ((modalId.data('bs.modal') || {})._isShown && $('#show-previous-image').is(":visible")) {
-                        $('#show-previous-image')
-                            .click();
-                    }
-                    break;
-
-                case 39: // right
-                    if ((modalId.data('bs.modal') || {})._isShown && $('#show-next-image').is(":visible")) {
-                        $('#show-next-image')
-                            .click();
-                    }
-                    break;
-
-                default:
-                    return; // exit this handler for other keys
-            }
-            e.preventDefault(); // prevent the default action (scroll / move caret)
-        });
-</script>
 </body>
 </html>
