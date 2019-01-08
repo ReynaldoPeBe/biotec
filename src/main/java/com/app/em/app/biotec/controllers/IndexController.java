@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class IndexController {
 	
 	//read application properties
-	@Value("${application.controller.titulo}")
-	private String titulo;
+	/*@Value("${application.controller.titulo}")
+	private String titulo;*/
 	
 	@GetMapping("/index")
 	public String index(Model m) {
-		m.addAttribute("title", this.titulo);
+		//m.addAttribute("title", this.titulo);
 		m.addAttribute("s", "Clonado en TICFPCN");
 		return "index";
 	}
