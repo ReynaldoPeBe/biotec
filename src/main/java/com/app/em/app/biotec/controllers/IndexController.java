@@ -15,6 +15,7 @@ public class IndexController {
 	@GetMapping("/index")
 	public String index(Model m) {
 		m.addAttribute("title", this.titulo);
+		m.addAttribute("s", "Clonado en TICFPCN");
 		return "index";
 	}
 }

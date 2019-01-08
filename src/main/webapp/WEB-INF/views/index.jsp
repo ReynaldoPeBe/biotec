@@ -58,7 +58,7 @@
 	</h4>
 
 	<h1 class="site-heading text-center text-white d-none d-lg-block">
-		<span class="site-heading-upper text-primary mb-3">Bienvenido</span>
+		<span class="site-heading-upper text-primary mb-3">Bienvenido ${s}</span>
 		<!-- <span class="site-heading-lower">PRIMER CONGRESO INTERNACIONAL DE BIOTECNOLOGÍA</span> -->
 		<span>PRIMER CONGRESO INTERNACIONAL DE BIOTECNOLOG&Iacute;A</span><br>
 		<br> <span>Bolivia Innova 2019</span>
