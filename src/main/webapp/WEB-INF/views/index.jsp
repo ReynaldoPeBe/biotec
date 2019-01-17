@@ -114,7 +114,7 @@
 						<h2 class="section-heading mb-4">
 							<span class="section-heading-upper"></span> <span
 								class="section-heading-lower"><h2>Inicio del evento:
-									14 de Abril 2019</h2></span>
+									15 de Abril 2019</h2></span>
 						</h2>
 						<div class="container">
 							<hr>
@@ -546,7 +546,7 @@
 										</li>
 										<li>
 											<h5 class="text-uppercase">Efectos sobre la
-												proliferac&iacute; celular y procesos relacionados de
+												proliferaci&oacute;n; celular y procesos relacionados de
 												plantas medicinales y sus mol&eacute;culas.</h5>
 											<p class="text-justify">
 												<article>

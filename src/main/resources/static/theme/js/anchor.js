@@ -8,7 +8,7 @@ function anchorfcpn(cc) {
     }, 1500);
 }
 
-var countDownDate = new Date("Apr 14, 2019 09:00:00").getTime();
+var countDownDate = new Date("Apr 15, 2019 09:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -60,8 +60,8 @@ $(window).scroll(function(){
 
 /*Enlaces*/
 function incripciones() {
-    location.href = "bta/incripciones";
+    location.href = "/incripciones";
 }
 function consulta() {
-    location.href = "bta/consulta";
+    location.href = "/consulta";
 }

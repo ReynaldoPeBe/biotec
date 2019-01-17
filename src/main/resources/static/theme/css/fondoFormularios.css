@@ -42,25 +42,23 @@ body {
     background-color: #5e3e22 !important;
     border-color: #5e3e22 !important;
 }
-
-
 li {
-    display:inline;
-    height: auto;
-    width: 220px;
-    margin: 10px;
-    background-color: #5e3e22;
+	display: inline;
+	height: auto;
+	width: 220px;
+	margin: 10px;
+	background-color: #5e3e22 !important;
 }
+
 brn-group {
-    overflow-y: scroll;
+	overflow-y: scroll;
 }
 /*
 [type='radio'] {
     display: hidden;
 }*/
-
-li.active{
-    background-color: #5e3e22!important;
+li.active {
+	background-color: #5e3e22 !important;
 }
 .mdb-select {
     width: 57%!important;
