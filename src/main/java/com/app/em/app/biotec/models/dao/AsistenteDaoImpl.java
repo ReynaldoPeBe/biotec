@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.app.em.app.biotec.models.entity.Asistente;
 
 @Repository
-public class AsistenDaoImpl implements IAsistenteDao {
+public class AsistenteDaoImpl implements IAsistenteDao {
 
 	@PersistenceContext
 	private EntityManager em;
