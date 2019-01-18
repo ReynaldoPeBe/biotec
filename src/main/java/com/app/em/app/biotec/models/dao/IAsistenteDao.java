@@ -6,4 +6,5 @@ import com.app.em.app.biotec.models.entity.Asistente;
 
 public interface IAsistenteDao {
 	public List<Asistente> finAll();
+	
 }

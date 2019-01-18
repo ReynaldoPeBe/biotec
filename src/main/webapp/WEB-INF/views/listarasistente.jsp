@@ -25,22 +25,32 @@
 	href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i"
 	rel="stylesheet">
 <!-- styles this template -->
+
 <link href="/theme/css/fondoFormularios.css" rel="stylesheet">
 </head>
-<body>
-	<table>
-		<thead>
-			<tr>
-				<th>Nombres</th>
-			</tr>
-		</thead>
-		<tbody>
-			<c:forEach items="${listadoasistente}" var="a">
-				<tr>
-					<td>${a.nombre}</td>
-				</tr>
-			</c:forEach>
-		</tbody>
-	</table>
+<body class="color-4">
+	<div class="container">
+	<h1 class="text-white border border-top-0 border-left-0 border-right-0 mt-3">Listado de asistentes</h1>
+		<div class="row">
+			<table class="table table-striped mt-5 col-12 col-md-12" style="background-color: #ffffff">
+				<thead class="white-text pt-1" style="background-color: #5e3e22">
+					<tr>
+						<th scope="col">Nombres</th>
+						<th scope="col">Paterno</th>
+						<th scope="col">Fecha registro</th>
+					</tr>
+				</thead>
+				<tbody>
+					<c:forEach items="${listadoasistente}" var="a">
+						<tr>
+							<td>${a.nombre}</td>
+							<td>${a.apellidoPaterno}</td>
+							<td>${a.fechaCreacion}</td>
+						</tr>
+					</c:forEach>
+				</tbody>
+			</table>
+		</div>
+	</div>
 </body>
 </html>
