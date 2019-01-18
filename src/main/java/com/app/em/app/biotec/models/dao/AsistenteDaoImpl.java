@@ -23,4 +23,10 @@ public class AsistenteDaoImpl implements IAsistenteDao {
 		return em.createQuery("from Asistente").getResultList();
 	}
 
+	@Override
+	@Transactional
+	public void save(Asistente asistente) {
+		em.persist(asistente);
+	}
+
 }

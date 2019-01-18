@@ -1,4 +1,5 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html; charset=UTF-8"%>
 <!DOCTYPE html>
@@ -40,6 +41,7 @@
 			</h3>
 			<h3 class="">
 				<b>CONGRESO DE BIOTECNOLOG&Iacute;A FCPN</b>
+
 			</h3>
 		</div>
 	</div>
@@ -61,80 +63,88 @@
 						información se emitirán certificados</b> correspondientes.
 				</div>
 				<div class="card-body">
-					<!-- Material form row -->
-					<form method="post" name="formulario22" id="formulario22"
-						action="<c:url value="/saveinscripcionbiotec"/>"
-						enctype="multipart/form-data">
+					<!-- FORMULARIO -->
+					<form:form action="/inscripciones" method="post"
+						modelAttribute="asistente" enctype="multipart/form-data">
+						
 						<div class="md-form ">
-							<i class="fa fa-1x fa-user prefix"></i> <input type="text"
-								class="form-control" id="nombre" name="nombre"> <label
-								for="nombre">Nombre</label>
+							<i class="fa fa-1x fa-user prefix"></i>
+							<form:input path="nombre" type="text" class="form-control"
+								id="nombre" name="nombre" />
+							<label for="nombre">Nombre</label>
 						</div>
 						<div class="md-form">
-							<i class="fa fa-1x fa-signature prefix"></i> <input type="text"
-								class="form-control" id="paterno" name="paterno"> <label
-								for="paterno">Apellido Paterno</label>
+							<i class="fa fa-1x fa-signature prefix"></i>
+							<form:input path="apellidoPaterno" type="text"
+								class="form-control" id="apellidoPaterno" name="paterno" />
+							<label for="paterno">Apellido Paterno</label>
 						</div>
 						<div class="md-form">
-							<i class="fa fa-1x fa-signature prefix"></i> <input type="text"
-								class="form-control" id="materno" name="materno"> <label
-								for="materno">Apellido Materno</label>
+							<i class="fa fa-1x fa-signature prefix"></i>
+							<form:input path="apellidoMaterno" type="text"
+								class="form-control" id="apellidoMaterno" name="apellidoMaterno" />
+							<label for="materno">Apellido Materno</label>
 						</div>
 						<div class="md-form">
-							<i class="fa fa-1x fa-signature prefix"></i> <input type="text"
-								class="form-control" id="ci" name="ci"
-								onfocusout="blurFunction()"> <label for="ci">C.I.</label>
+							<i class="fa fa-1x fa-signature prefix"></i>
+							<form:input path="ci" type="text" class="form-control" id="ci"
+								name="ci" onfocusout="blurFunction()" />
+							<label for="ci">C.I.</label>
+						</div>
+
+						<div class="md-form">
+							<i class="fa fa-1x fa-mobile prefix"></i>
+							<form:input path="celular" type="text" class="form-control"
+								id="celular" name="celular" />
+							<label for="celular5">Nro de celular.</label>
 						</div>
 
 						<div class="md-form">
-							<i class="fa fa-1x fa-mobile prefix"></i> <input type="text"
-								class="form-control" id="celular5" name="celular5"> <label
-								for="celular5">Nro de celular.</label>
-						</div>
-
-
-						<div class="md-form">
-							<i class="fa fa-1x fa-at prefix"></i> <input type="text"
-								class="form-control" id="email" name="email"> <label
-								for="email">Email</label>
+							<i class="fa fa-1x fa-at prefix"></i>
+							<form:input path="email" type="text" class="form-control"
+								id="email" name="email" />
+							<label for="email">Email</label>
 						</div>
 						<div class="md-form">
-							<i class="fa fa-1x fa-university prefix"></i> <input type="text"
-								class="form-control" id="universidad" name="universidad">
+							<i class="fa fa-1x fa-university prefix"></i>
+							<form:input path="universidad" type="text" class="form-control"
+								id="universidad" name="universidad" />
 							<label for="universidad">Universidad</label>
 						</div>
+						<%--
 						<div class="md-form">
-							<select
+							<form:select path="departamento"
 								class="col-sm-12 border-top-0 border-left-0 border-right-0 custom-select"
-								name="id_departamento" id="id_departamento">
-								<option value="" disabled selected>Elija Departamento</option>
-								<option value="1">La Paz</option>
-								<option value="2">Oruro</option>
-								<option value="3">Cochabamba</option>
-								<option value="4">Santa Cruz</option>
-								<option value="5">Sucre</option>
-								<option value="6">Potosi</option>
-								<option value="7">Tarija</option>
-								<option value="8">Beni</option>
-								<option value="9">Pando</option>
-							</select>
+								name="departamento" id="departamento">
+								<form:option value="" disabled selected>Elija Departamento</form:option>
+								<form:option value="1">La Paz</form:option>
+								<form:option value="2">Oruro</form:option>
+								<form:option value="3">Cochabamba</form:option>
+								<form:option value="4">Santa Cruz</form:option>
+								<form:option value="5">Sucre</form:option>
+								<form:option value="6">Potosi</form:option>
+								<form:option value="7">Tarija</form:option>
+								<form:option value="8">Beni</form:option>
+								<form:option value="9">Pando</form:option>
+							</form:select>
 						</div>
+						 --%>
 						<p class="text-secondary">Selecciona si eres Estudiante o
 							Profesional</p>
+						<!-- 
 						<div class="btn-group btn-group-toggle" data-toggle="buttons">
 							<ul>
-								<li class="btn btn-light mx-5" 
-								style="background-color: #e6a756!important;font-size: 15px; color:#ffffff!important;">
-								<input type="radio"
-									name="options" id="option1" autocomplete="off"> <i
-									class="fa fa-5x fa-user prefix" style="font-size: 15px;"></i>
+								<li class="btn btn-light mx-5"
+									style="background-color: #e6a756 !important; font-size: 15px; color: #ffffff !important;">
+									<input path="option1" type="radio" name="options" id="option1"
+									autocomplete="off"/> <i class="fa fa-5x fa-user prefix"
+									style="font-size: 15px;"></i>
 									<p>Estudiante</p>
-							    </li>
+								</li>
 								<li id="lilia" class="btn btn-light mx-5"
-								style="background-color: #e6a756 !important;font-size: 15px; color:#ffffff!important;"
-								><input type="radio"
-									name="options" id="option1" autocomplete="off"> <i
-									class="fa fa-5x fa-user-graduate prefix"
+									style="background-color: #e6a756 !important; font-size: 15px; color: #ffffff !important;">
+									<input type="radio" name="options" id="option1" autocomplete="off"/>
+									<i class="fa fa-5x fa-user-graduate prefix"
 									style="font-size: 15px;"></i>
 									<p>Profesional</p></li>
 							</ul>
@@ -146,14 +156,14 @@
 								type="file" name="file" id="file" class="btn col-12"
 								style="background-color: #5e3e22">
 						</div>
+						 -->
 						<hr>
-
-
 						<p class="text-right pt-5">
 							<button type="submit" class="btn btn-primary btn-lg ">
 								Registrar mi inscripción</button>
 						</p>
-					</form>
+						<form:input path="id" type="hidden" id="id" name="id" />
+					</form:form>
 					<!-- Material form row -->
 				</div>
 			</div>

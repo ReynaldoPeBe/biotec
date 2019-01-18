@@ -12,14 +12,11 @@ public class IndexController {
 		m.addAttribute("s", "");
 		return "index";
 	}
+	/*
 	
-	@GetMapping("/incripciones")
-	public String incripciones(Model m) {
-		return"incripciones";
-	}
 	@PostMapping("/saveinscripcionbiotec")
 	public String inscripciones () {
 		System.out.print("Entrando para grabar");
 		return "";
-	}
+	}*/
 }
