@@ -25,7 +25,7 @@ public class AsistenteDaoImpl implements IAsistenteDao {
 
 	@Override
 	@Transactional
-	public void save(Asistente asistente) {
+	public void save(Asistente asistente) { 
 		em.persist(asistente);
 	}
 
