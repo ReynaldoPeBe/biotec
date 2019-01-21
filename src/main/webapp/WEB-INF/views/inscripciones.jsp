@@ -66,7 +66,7 @@
 					<!-- FORMULARIO -->
 					<form:form action="/inscripciones" method="post"
 						modelAttribute="asistente" enctype="multipart/form-data">
-						
+
 						<div class="md-form ">
 							<i class="fa fa-1x fa-user prefix"></i>
 							<form:input path="nombre" type="text" class="form-control"
@@ -111,12 +111,9 @@
 								id="universidad" name="universidad" />
 							<label for="universidad">Universidad</label>
 						</div>
-						<%--
 						<div class="md-form">
-							<form:select path="departamento"
-								class="col-sm-12 border-top-0 border-left-0 border-right-0 custom-select"
-								name="departamento" id="departamento">
-								<form:option value="" disabled selected>Elija Departamento</form:option>
+							<form:select path="departamento" class="col-sm-12 border-top-0 border-left-0 border-right-0 custom-select">
+								<form:option value="" disabled="true">Elija Depatamento</form:option>
 								<form:option value="1">La Paz</form:option>
 								<form:option value="2">Oruro</form:option>
 								<form:option value="3">Cochabamba</form:option>
@@ -128,28 +125,28 @@
 								<form:option value="9">Pando</form:option>
 							</form:select>
 						</div>
-						 --%>
 						<p class="text-secondary">Selecciona si eres Estudiante o
 							Profesional</p>
-						<!-- 
+						
 						<div class="btn-group btn-group-toggle" data-toggle="buttons">
 							<ul>
 								<li class="btn btn-light mx-5"
 									style="background-color: #e6a756 !important; font-size: 15px; color: #ffffff !important;">
-									<input path="option1" type="radio" name="options" id="option1"
-									autocomplete="off"/> <i class="fa fa-5x fa-user prefix"
+									<form:radiobutton path="tipoEstudiante" name="tipoEstudiante" id="tipoEstudiante" value="Estudiante"/>
+									<i class="fa fa-5x fa-user prefix"
 									style="font-size: 15px;"></i>
 									<p>Estudiante</p>
 								</li>
 								<li id="lilia" class="btn btn-light mx-5"
 									style="background-color: #e6a756 !important; font-size: 15px; color: #ffffff !important;">
-									<input type="radio" name="options" id="option1" autocomplete="off"/>
+									<form:radiobutton path="tipoEstudiante" name="tipoEstudiante" id="tipoEstudiante" value="Profesional"/>
 									<i class="fa fa-5x fa-user-graduate prefix"
 									style="font-size: 15px;"></i>
 									<p>Profesional</p></li>
 							</ul>
 						</div>
 						<hr>
+						<!-- 
 						<div class="col-12 ml-4">
 							<label><i class="fa fa-2x fa-file prefix"></i> Deposito
 								bancario (Solamente archivos .pdf, .png y .jpg)</label> <br> <input

@@ -37,6 +37,9 @@ public class Asistente implements Serializable {
 	private String universidad;
 	private String departamento;
 	
+	@Column(name="tipo_estudiante")
+	private String tipoEstudiante;
+	
 	@Column(name="fecha_creacion")
 	@Temporal(TemporalType.DATE)
 	private Date fechaCreacion;
@@ -46,6 +49,14 @@ public class Asistente implements Serializable {
 		fechaCreacion= new Date();
 	}
 	
+	public String getTipoEstudiante() {
+		return tipoEstudiante;
+	}
+
+	public void setTipoEstudiante(String tipoEstudiante) {
+		this.tipoEstudiante = tipoEstudiante;
+	}
+
 	public Long getId() {
 		return id;
 	}
