@@ -146,14 +146,15 @@
 							</ul>
 						</div>
 						<hr>
-						<!-- 
+						
 						<div class="col-12 ml-4">
 							<label><i class="fa fa-2x fa-file prefix"></i> Deposito
-								bancario (Solamente archivos .pdf, .png y .jpg)</label> <br> <input
+								bancario (Solamente archivos .pdf, .png y .jpg)</label> <br> 
+								<input
 								type="file" name="file" id="file" class="btn col-12"
 								style="background-color: #5e3e22">
 						</div>
-						 -->
+						
 						<hr>
 						<p class="text-right pt-5">
 							<button type="submit" class="btn btn-primary btn-lg ">
