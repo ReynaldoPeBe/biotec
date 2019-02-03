@@ -49,6 +49,16 @@ public class Asistente implements Serializable {
 		fechaCreacion= new Date();
 	}
 	
+	private String boleta;
+	
+	public String getBoleta() {
+		return boleta;
+	}
+
+	public void setBoleta(String boleta) {
+		this.boleta = boleta;
+	}
+
 	public String getTipoEstudiante() {
 		return tipoEstudiante;
 	}

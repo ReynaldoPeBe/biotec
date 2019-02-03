@@ -146,14 +146,26 @@
 							</ul>
 						</div>
 						<hr>
-						
+						<%--
 						<div class="col-12 ml-4">
 							<label><i class="fa fa-2x fa-file prefix"></i> Deposito
 								bancario (Solamente archivos .pdf, .png y .jpg)</label> <br> 
-								<input
-								type="file" name="file" id="file" class="btn col-12"
-								style="background-color: #5e3e22">
+								<form:input path="boleta"
+								type="file" name="boleta" id="boleta" class="btn col-12"
+								style="background-color: #5e3e22"/>
 						</div>
+						--%>
+						
+						<div class="col-12 md-form row">
+							<i class="fa fa-1x fa-file prefix"></i><label for="file">Boleta</label>
+							<input  type="file" class="form-control text-white"
+								 name="file" style="background-color: #5e3e22; margin-left: 100px;" />
+						</div>
+						
+						
+						
+						
+						
 						
 						<hr>
 						<p class="text-right pt-5">

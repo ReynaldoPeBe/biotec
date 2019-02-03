@@ -1,5 +1,9 @@
 package com.app.em.app.biotec.controllers;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +11,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.app.em.app.biotec.models.dao.IAsistenteDao;
 import com.app.em.app.biotec.models.entity.Asistente;
@@ -31,7 +37,22 @@ public class AsistenteController {
 		return"inscripciones";
 	}
 	@PostMapping("/inscripciones")
-	public String saveasistente (Asistente asistente) {
+	public String saveasistente (Asistente asistente, @RequestParam("file") MultipartFile boleta) {
+		
+		if(!boleta.isEmpty()) {
+			Path directorio = Paths.get("src//main//resources//static/uploads");
+			String rootPath=directorio.toFile().getAbsolutePath();
+			try {
+				byte[] bytes=boleta.getBytes();
+				Path ruta=Paths.get(rootPath+"//"+boleta.getOriginalFilename());
+				Files.write(ruta, bytes);
+				asistente.setBoleta(boleta.getOriginalFilename());
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
 		asistenteDao.save(asistente);
 		return "redirect:listarasistente";
 	}
