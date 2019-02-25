@@ -52,7 +52,7 @@
                 <h3><b></b></h3>
             </div>-->
 				<div class="card-body text-center">
-					<h2 class="card-title" style="color: #5e3e22">
+					<h2 class="card-title" style="color: #5e3e22;">
 						<b>Fomulario de inscripci&oacute;n</b>
 					</h2>
 				</div>
@@ -96,7 +96,7 @@
 							<i class="fa fa-1x fa-mobile prefix"></i>
 							<form:input path="celular" type="text" class="form-control"
 								id="celular" name="celular" />
-							<label for="celular5">Nro de celular.</label>
+							<label for="celular">Nro de celular.</label>
 						</div>
 
 						<div class="md-form">

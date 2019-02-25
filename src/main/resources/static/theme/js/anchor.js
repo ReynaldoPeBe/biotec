@@ -60,7 +60,7 @@ $(window).scroll(function(){
 
 /*Enlaces*/
 function incripciones() {
-    location.href = "/incripciones";
+    location.href = "/inscripciones";
 }
 function consulta() {
     location.href = "/consulta";
