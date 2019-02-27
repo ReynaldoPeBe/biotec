@@ -39,7 +39,7 @@
 			<h3 class="">
 				<b>Facultad de Ciencias Puras y Naturales</b>
 			</h3>
-			<h3 class="">
+			<h3 class="">  
 				<b>CONGRESO DE BIOTECNOLOG&Iacute;A FCPN</b>
 
 			</h3>
