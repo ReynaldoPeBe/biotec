@@ -39,7 +39,7 @@
 			<h3 class="">
 				<b>Facultad de Ciencias Puras y Naturales</b>
 			</h3>
-			<h3 class="">  
+			<h3 class="">
 				<b>CONGRESO DE BIOTECNOLOG&Iacute;A FCPN</b>
 
 			</h3>
@@ -112,7 +112,8 @@
 							<label for="universidad">Universidad</label>
 						</div>
 						<div class="md-form">
-							<form:select path="departamento" class="col-sm-12 border-top-0 border-left-0 border-right-0 custom-select">
+							<form:select path="departamento"
+								class="col-sm-12 border-top-0 border-left-0 border-right-0 custom-select">
 								<form:option value="" disabled="true">Elija Depatamento</form:option>
 								<form:option value="1">La Paz</form:option>
 								<form:option value="2">Oruro</form:option>
@@ -127,22 +128,24 @@
 						</div>
 						<p class="text-secondary">Selecciona si eres Estudiante o
 							Profesional</p>
-						
+
 						<div class="btn-group btn-group-toggle" data-toggle="buttons">
 							<ul>
 								<li class="btn btn-light mx-5"
 									style="background-color: #e6a756 !important; font-size: 15px; color: #ffffff !important;">
-									<form:radiobutton path="tipoEstudiante" name="tipoEstudiante" id="tipoEstudiante" value="Estudiante"/>
-									<i class="fa fa-5x fa-user prefix"
-									style="font-size: 15px;"></i>
+									<form:radiobutton path="tipoEstudiante" name="tipoEstudiante"
+										id="tipoEstudiante" value="Estudiante" /> <i
+									class="fa fa-5x fa-user prefix" style="font-size: 15px;"></i>
 									<p>Estudiante</p>
 								</li>
 								<li id="lilia" class="btn btn-light mx-5"
 									style="background-color: #e6a756 !important; font-size: 15px; color: #ffffff !important;">
-									<form:radiobutton path="tipoEstudiante" name="tipoEstudiante" id="tipoEstudiante" value="Profesional"/>
-									<i class="fa fa-5x fa-user-graduate prefix"
+									<form:radiobutton path="tipoEstudiante" name="tipoEstudiante"
+										id="tipoEstudiante" value="Profesional" /> <i
+									class="fa fa-5x fa-user-graduate prefix"
 									style="font-size: 15px;"></i>
-									<p>Profesional</p></li>
+									<p>Profesional</p>
+								</li>
 							</ul>
 						</div>
 						<hr>
@@ -155,24 +158,22 @@
 								style="background-color: #5e3e22"/>
 						</div>
 						--%>
-						
 						<div class="col-12 md-form row">
 							<i class="fa fa-1x fa-file prefix"></i><label for="file">Boleta</label>
-							<input  type="file" class="form-control text-white"
-								 name="file" style="background-color: #5e3e22; margin-left: 100px;" />
+							<input type="file" class="form-control text-white" name="file"
+								style="background-color: #5e3e22; margin-left: 100px;" />
 						</div>
-						
-						
-						
-						
-						
-						
 						<hr>
 						<p class="text-right pt-5">
 							<button type="submit" class="btn btn-primary btn-lg ">
 								Registrar mi inscripción</button>
 						</p>
 						<form:input path="id" type="hidden" id="id" name="id" />
+						<%--
+						<c:if test="${not empty asistente.id}">
+						<form:input path="fechaCreacion" type="text" class="date" id="fechaCreacion" name="fechaCreacion"/>
+						</c:if> 
+						--%>
 					</form:form>
 					<!-- Material form row -->
 				</div>

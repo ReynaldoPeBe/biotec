@@ -38,6 +38,7 @@
 						<th scope="col">Nombres</th>
 						<th scope="col">Paterno</th>
 						<th scope="col">Fecha registro</th>
+						<th scope="col">Editar</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -46,6 +47,7 @@
 							<td>${a.nombre}</td>
 							<td>${a.apellidoPaterno}</td>
 							<td>${a.fechaCreacion}</td>
+							<td><a href='<c:url value="/inscripciones/${a.id}"></c:url>'>Editar</a></td>
 						</tr>
 					</c:forEach>
 				</tbody>

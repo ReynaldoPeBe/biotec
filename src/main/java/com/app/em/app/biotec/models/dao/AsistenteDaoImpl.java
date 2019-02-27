@@ -25,8 +25,19 @@ public class AsistenteDaoImpl implements IAsistenteDao {
 
 	@Override
 	@Transactional
-	public void save(Asistente asistente) { 
-		em.persist(asistente);
+	public void save(Asistente asistente){
+		if (asistente.getId() != null && asistente.getId() > 0) {
+			System.out.println(":::::::::::::::::::::    +"+asistente.getFechaCreacion());
+			asistente.setFechaCreacion(asistente.getFechaCreacion());
+			em.merge(asistente);
+		} else {
+			em.persist(asistente);
+		}
+	}
+
+	@Override
+	public Asistente findOne(Long id) {
+		return em.find(Asistente.class, id);
 	}
 
 }
