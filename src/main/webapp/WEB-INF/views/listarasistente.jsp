@@ -32,7 +32,8 @@
 	<div class="container">
 	<h1 class="text-white border border-top-0 border-left-0 border-right-0 mt-3">Listado de asistentes</h1>
 		<div class="row">
-			<table class="table table-striped mt-5 col-12 col-md-12" style="background-color: #ffffff">
+		<a href='<c:url value="/inscripciones"></c:url>' class="btn btn-warning">Nuevo asistente</a>
+			<table class="table table-striped col-12 col-md-12" style="background-color: #ffffff">
 				<thead class="white-text pt-1" style="background-color: #5e3e22">
 					<tr>
 						<th scope="col">Nombres</th>

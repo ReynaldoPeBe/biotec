@@ -13,6 +13,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 @Entity
 @Table(name="asistentes")
 public class Asistente implements Serializable {
@@ -42,6 +44,7 @@ public class Asistente implements Serializable {
 	
 	@Column(name="fecha_creacion")
 	@Temporal(TemporalType.DATE)
+	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date fechaCreacion;
 	
 	@PrePersist

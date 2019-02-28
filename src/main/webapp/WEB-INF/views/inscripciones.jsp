@@ -91,7 +91,6 @@
 								name="ci" onfocusout="blurFunction()" />
 							<label for="ci">C.I.</label>
 						</div>
-
 						<div class="md-form">
 							<i class="fa fa-1x fa-mobile prefix"></i>
 							<form:input path="celular" type="text" class="form-control"
@@ -169,11 +168,11 @@
 								Registrar mi inscripción</button>
 						</p>
 						<form:input path="id" type="hidden" id="id" name="id" />
-						<%--
-						<c:if test="${not empty asistente.id}">
-						<form:input path="fechaCreacion" type="text" class="date" id="fechaCreacion" name="fechaCreacion"/>
-						</c:if> 
-						--%>
+						
+						<%-- <c:if test="${not empty asistente.id}"> --%>
+						<form:hidden path="fechaCreacion" class="date" id="fechaCreacion" name="fechaCreacion"/>
+						<%-- </c:if> --%> 
+						
 					</form:form>
 					<!-- Material form row -->
 				</div>
